@@ -2,6 +2,7 @@ html, body {
     font-family: "Comfortaa", sans-serif;
     font-size: 20px;
     color: #FFF;
+    background: #565656;
 }
 
 .wrapper {
@@ -15,6 +16,17 @@ html, body {
     max-width: 1142px;
     padding: 0 15px;
     height: 100%;
+}
+
+.block-title {
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 71px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFF4DF;
 }
 
 .button {
@@ -43,6 +55,55 @@ html, body {
 }
 
 .button--filled {
+
+}
+
+.block-shadow {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(18, 12, 8, 0.6);
+    position: absolute;
+    transition: .3s;
+    border-radius: inherit;
+}
+
+.block-shadow:hover {
+    opacity: 0;
+}
+
+.arrow-btn {
+    display: flex;
+    transition: .3s;
+    align-items: center;
+}
+
+.arrow-btn:hover {
+    transform: translate(130%, 0);
+}
+
+.arrow-btn:hover:last-child {
+    transform: translate(-80%, 0);
+}
+
+.arrow-btn:first-child:hover {
+
+}
+
+.arrow-btn__string {
+    display: inline-block;
+    transition: .3s;
+}
+
+.arrow-btn__arrow {
+    display: inline-block;
+    transition: .3s;
+}
+
+.arrow-btn__arrow:hover {
+
+}
+
+.arrow-btn__string:hover {
 
 }
 
@@ -191,3 +252,90 @@ html, body {
     border-radius: 4px;
 }
 
+.materials {
+    height: 100vh;
+    background: #FFF4DF;
+    padding: 60px;
+}
+
+.materials__header {
+    margin-bottom: 40px;
+}
+
+.materials__header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.materials__title {
+    color: #1C130C;
+}
+
+.materials__button {
+    color: #1C130C;
+}
+
+.materials__list {
+    display: grid;
+    grid-gap: 28px;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: repeat(4, 126px);
+    grid-template-areas:
+        "wood  wood concrete"
+        "wood  wood     rock"
+        "glass glass    rock"
+        "metal resin   resin";
+}
+
+.materials__wood {
+    grid-area: wood;
+    background: url("../images/materials/wood.png") 0 0 / cover no-repeat;
+    border-radius: 16px 0 0 0;
+}
+
+.materials__concrete {
+    grid-area: concrete;
+    background: url("../images/materials/concrete.png") 0 0 / cover no-repeat;
+    border-radius: 0 16px 0 0;
+}
+
+.materials__glass {
+    grid-area: glass;
+    background: url("../images/materials/glass.png") 0 0 / cover no-repeat;
+}
+
+.materials__rock {
+    grid-area: rock;
+    background: url("../images/materials/rock.png") 0 0 / cover no-repeat;
+}
+
+.materials__metal {
+    grid-area: metal;
+    background: url("../images/materials/metal.png") 0 0 / cover no-repeat;
+    border-radius: 0 0 0 16px;
+}
+
+.materials__resin {
+    grid-area: resin;
+    background: url("../images/materials/epoxy resin.png") 0 0 / cover no-repeat;
+    border-radius: 0 0 16px 0;
+}
+
+.materials__list-item {
+    position: relative;
+}
+
+.materials__list-item-shadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Sansation', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
